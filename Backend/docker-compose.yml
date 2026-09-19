@@ -1,0 +1,19 @@
+services:
+  api:
+    build: .
+    ports: ["5050:5050"]
+    environment:
+      DB_URL: jdbc:postgresql://postgres:5432/englishlog
+      DB_USERNAME: englishlog
+      DB_PASSWORD: englishlog
+      DB_DRIVER: org.postgresql.Driver
+      JWT_SECRET: change-this-in-production
+    depends_on: [postgres]
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: englishlog
+      POSTGRES_USER: englishlog
+      POSTGRES_PASSWORD: englishlog
+    volumes: [englishlog-data:/var/lib/postgresql/data]
+volumes: {englishlog-data: {}}

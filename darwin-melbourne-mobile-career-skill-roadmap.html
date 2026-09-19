@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Darwin → Melbourne 移动开发技能补齐路线图</title>
+<style>
+:root{color-scheme:light dark}*{box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;max-width:1120px;margin:0 auto;padding:32px 24px 80px;line-height:1.72;color:#24292f;background:#fff}h1,h2,h3{line-height:1.3;color:#172033}h1{font-size:2.1rem;border-bottom:2px solid #d8dee4;padding-bottom:.4em}h2{margin-top:2em;border-bottom:1px solid #d8dee4;padding-bottom:.25em}h3{margin-top:1.5em}p,li{font-size:16px}a{color:#0969da;text-decoration:none}a:hover{text-decoration:underline}.hero{padding:18px 22px;border:1px solid #b6d7ff;border-radius:12px;background:linear-gradient(135deg,#eef7ff,#f8fbff)}.badge{display:inline-block;padding:3px 9px;margin:3px;border-radius:99px;background:#ddf4e8;color:#116329;font-size:13px;font-weight:650}.warning{border-left:4px solid #d1242f;padding:12px 16px;background:#fff1f0}.note{border-left:4px solid #2f81f7;padding:12px 16px;background:#f6f8fa}table{display:block;width:100%;overflow-x:auto;border-collapse:collapse;margin:1em 0 1.5em}th,td{min-width:125px;padding:9px 12px;border:1px solid #d0d7de;text-align:left;vertical-align:top}th{background:#f6f8fa}.priority{font-weight:700;color:#0969da}.must{font-weight:700;color:#b62324}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}.card{border:1px solid #d0d7de;border-radius:10px;padding:16px;background:#fff}.card h3{margin-top:0}.small{font-size:14px;color:#57606a}.check{font-size:1.15em}code{padding:.15em .35em;border-radius:5px;background:#eff1f3;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}pre{overflow-x:auto;padding:14px;border-radius:8px;background:#f6f8fa}hr{border:0;border-top:1px solid #d8dee4;margin:2em 0}@media(max-width:700px){body{padding:20px 15px 60px}h1{font-size:1.7rem}p,li{font-size:15px}}@media(prefers-color-scheme:dark){body{color:#c9d1d9;background:#0d1117}h1,h2,h3{color:#e6edf3}h1,h2{border-color:#30363d}.hero{border-color:#1f6feb;background:linear-gradient(135deg,#111c2c,#0d1117)}a{color:#58a6ff}.warning{background:#2d1114}.note,.card,pre,th{background:#161b22}.card,th,td{border-color:#30363d}.small{color:#8b949e}code{background:#21262d}}@media print{body{max-width:none;padding:0;color:#000}a{color:inherit}.hero{background:none}}
+</style>
+</head>
+<body>
+<div class="hero">
+<h1>Darwin → Melbourne 移动开发技能补齐路线图</h1>
+<p><strong>适用人群：</strong>33 岁，约 10 年 Android，约 4 年 Flutter；计划 2027 年 6 月前往 Darwin，优先获取 Darwin 本地经验，接受全澳洲远程，数年后倾向 Melbourne。</p>
+<p><span class="badge">主目标：Darwin 本地</span><span class="badge">备选：全澳洲 Remote</span><span class="badge">长期：Melbourne Senior/Lead</span><span class="badge">原则：短期可交付</span></p>
+</div>
+
+<h2>一、先给结论</h2>
+<div class="warning"><strong>不要同时学习十几个方向。</strong>你的核心优势已经是成熟的 Android/Flutter 交付能力；短期最划算的补缺不是重学前端、后端、DevOps、数据和云，而是构建一条能被 Darwin 和 Melbourne 雇主识别的“移动端 → 应用/API → 可靠交付”证据链。</div>
+<ol>
+<li><strong>第一优先：</strong>现代 Android（Kotlin、Jetpack Compose、Coroutines/Flow、架构、测试）——这是你去 Melbourne 最直接的增值，也是 Darwin 纯移动岗出现时的最强竞争力。</li>
+<li><strong>第二优先：</strong>Flutter 生产化和原生互操作——让你能投 Cross-platform、Flutter、Mobile Software Engineer，而不是只证明“会写 Flutter 页面”。</li>
+<li><strong>第三优先：</strong>API/Integration 基础（REST、认证、JSON/XML、重试、SQL、一个后端栈）——这是 Darwin 目前最明显的岗位缺口，也是本地 Application/Integration Developer 的桥梁。</li>
+<li><strong>第四优先：</strong>测试、CI/CD、Docker、云部署和可观测性——让简历符合澳洲 JD 的“能交付和支持生产系统”，而不只是客户端开发。</li>
+<li><strong>同步进行：</strong>英文、系统设计和行为面试。建议技术补缺投入约 50%，英文 30%，面试 20%；最后 8 周调整为 30% / 35% / 35%。</li>
+</ol>
+
+<h2>二、市场依据：Darwin 现在需要什么，Melbourne 将来需要什么</h2>
+<table><thead><tr><th>市场</th><th>本次快照</th><th>JD 关键词</th><th>对你的判断</th></tr></thead><tbody>
+<tr><td>Darwin 本地</td><td>Jora 约 3 个 Android、2 个 Flutter、9 个 Mobile；Software Engineer 约 34；Application Developer 约 17；Integration Developer 约 33。数字含聚合/重复，不等于独立职位。</td><td>Web/API、第三方系统、集成平台、.NET、SQL、Git/CI/CD、测试、文档、stakeholder；政府/国防另有公民和 clearance 门槛。</td><td>纯移动岗位少；应以 Mobile + Application/Software Engineer 双轨投递。重点补 API、SQL、测试和交付，而非转成纯 IT Support。</td></tr>
+<tr><td>澳洲 Remote</td><td>Jora 的 Remote Android/Flutter 搜索结果可见多个澳洲团队，但“Remote”不一定允许在 NT 居住，需逐个确认 payroll、时区和工作权。</td><td>Kotlin/Java、Flutter、REST、稳定性、安全、UX；部分岗位要求 iOS/Swift、React Native/TypeScript 或后端能力。</td><td>是比 Darwin 纯岗位更现实的备选；简历须明确“located in Darwin, available for Australia-wide remote, Australian work rights”。</td></tr>
+<tr><td>Melbourne 中长期</td><td>Jora 快照约 100 个 Android、100 个 Flutter、100 个 Mobile（均为页面上限/聚合数，不是精确独立职位）。可见岗位包含 REA、CommBank、Bupa、Tabcorp 等。</td><td>Kotlin、Jetpack Compose、现代 Android、移动架构、支付/安全/可靠性、跨团队、技术领导；Flutter 岗位也常混合 React Native/TypeScript/Web。</td><td>你的 Android 年限很有价值；Compose、现代测试、可观测性、系统设计、带人/影响力和英文沟通决定能否冲 Senior/Lead。</td></tr>
+</tbody></table>
+<div class="note"><strong>重要：</strong>招聘聚合站的“100 jobs”常是展示上限，并且会重复同一职位。它适合比较方向，不适合预测空缺数量或承诺某个职位到 2027 年仍存在。</div>
+
+<h2>三、你的主要缺口排序</h2>
+<table><thead><tr><th>优先级</th><th>缺口</th><th>目标水平</th><th>短期是否值得补</th><th>可验证成果</th></tr></thead><tbody>
+<tr><td class="priority">P0</td><td>Jetpack Compose + Modern Android</td><td>能用 Compose 完成真实功能，理解状态、导航、性能和无障碍</td><td>必须</td><td>公开项目一个 Compose feature；测试和 README</td></tr>
+<tr><td class="priority">P0</td><td>Android 测试与质量</td><td>JUnit、网络/数据库测试、Compose UI test、Mock、发布前质量门禁</td><td>必须</td><td>CI 自动执行 test/lint；说明测试策略</td></tr>
+<tr><td class="priority">P0</td><td>英文工作沟通与面试</td><td>能讲清架构、事故、取舍、协作和结果</td><td>每天补</td><td>30 个英文 STAR 故事；10 次模拟面试</td></tr>
+<tr><td class="priority">P1</td><td>REST/API Integration</td><td>认证、分页、错误模型、超时、重试、幂等、JSON/XML、API 文档</td><td>必须</td><td>客户端 + API + Postman/OpenAPI + integration tests</td></tr>
+<tr><td class="priority">P1</td><td>SQL 与后端最小闭环</td><td>CRUD、JOIN、索引、事务、迁移；Java/Spring 或 C#/.NET 二选一</td><td>建议</td><td>PostgreSQL + Docker Compose + 10 条 SQL</td></tr>
+<tr><td class="priority">P1</td><td>CI/CD、Docker、云基础</td><td>GitHub Actions、容器化、环境变量、健康检查、基础部署</td><td>建议</td><td>push 后自动构建、测试、发布 demo</td></tr>
+<tr><td class="priority">P1</td><td>可观测性与生产支持</td><td>日志、Crash/ANR、指标、trace、故障排查和 postmortem</td><td>建议</td><td>故障演练文档和 dashboard 截图/配置</td></tr>
+<tr><td class="priority">P2</td><td>Flutter 生产化</td><td>状态管理、原生插件、性能、路由、测试、Android/iOS 发布</td><td>巩固</td><td>同一业务用 Flutter 实现并展示原生互操作</td></tr>
+<tr><td class="priority">P2</td><td>iOS/Swift 或 React Native/TypeScript</td><td>能读代码、参与跨平台协作，不追求短期转型</td><td>了解</td><td>只做一个小 feature；不要挤占 P0/P1</td></tr>
+<tr><td class="priority">P2</td><td>技术领导力</td><td>设计评审、mentor、拆解任务、风险沟通、跨团队决策</td><td>整理已有经验</td><td>架构决策记录、code review 示例、STAR 故事</td></tr>
+</tbody></table>
+
+<h2>四、短期学习边界：学什么，不学什么</h2>
+<div class="grid">
+<div class="card"><h3>必须掌握到“能面试/能交付”</h3><ul><li>Kotlin：Coroutines、Flow、sealed/error model、泛型、测试。</li><li>Compose：state、recomposition、navigation、responsive UI、accessibility。</li><li>Android：模块化、Clean/MVVM、Room、Retrofit/OkHttp、WorkManager、性能。</li><li>REST/API：OAuth/JWT 概念、HTTP、分页、缓存、重试和 OpenAPI。</li><li>JUnit/Mock/Compose UI test、GitHub Actions、Docker Compose、PostgreSQL。</li></ul></div>
+<div class="card"><h3>理解并能展示，不追求专家</h3><ul><li>Azure/AWS 基本服务、部署和 secrets。</li><li>Kafka/RabbitMQ 的消息、重试、死信队列概念。</li><li>XML、企业集成、API gateway 和系统边界。</li><li>iOS/Swift 或 React Native/TypeScript 基础。</li><li>安全：OWASP Mobile、密钥管理、PII、最小权限。</li></ul></div>
+<div class="card"><h3>短期明确不投入</h3><ul><li>同时深入 C#/.NET、Java/Spring、Node、React、Swift、RN。</li><li>Salesforce/Vlocity、ArcGIS、Windows Server、网络硬件。</li><li>为了证书而考多个云证书；先做可运行项目。</li><li>从零学习数据科学、AI 算法等与目标岗位不直接相关的方向。</li></ul></div>
+</div>
+
+<h2>五、建议代码仓库：一个项目覆盖大多数缺口</h2>
+<p>后续生成代码仓库时，建议自动命名为：</p><pre>darwin-mobile-integration-portfolio</pre>
+<p>项目定位：一个“偏远地区服务/社区医疗预约”示例产品，符合 Darwin 的医疗、政府、大学和社区服务场景，同时便于展示移动端、系统集成、隐私和可靠性。</p>
+<table><thead><tr><th>目录</th><th>内容</th><th>对应 JD 能力</th></tr></thead><tbody>
+<tr><td><code>android-app/</code></td><td>Kotlin + Compose + MVVM/Clean；Room；Retrofit；离线缓存；WorkManager；无障碍</td><td>现代 Android、UI、性能、可靠性</td></tr>
+<tr><td><code>flutter-app/</code></td><td>Flutter feature；状态管理；platform channel；Android/iOS build</td><td>Flutter/Cross-platform</td></tr>
+<tr><td><code>api/</code></td><td>建议 Java/Spring Boot（若你已有 Java 基础）或 C#/.NET 6+；REST；OpenAPI；JWT；JSON/XML endpoint</td><td>Application/Integration、API、后端</td></tr>
+<tr><td><code>db/</code></td><td>PostgreSQL schema、迁移、索引、审计字段</td><td>SQL、数据模型、隐私</td></tr>
+<tr><td><code>integration/</code></td><td>第三方 mock provider、重试、幂等、dead-letter 示例、数据映射</td><td>Darwin Integration Developer</td></tr>
+<tr><td><code>infra/</code></td><td>Docker Compose、GitHub Actions、环境变量、health check</td><td>CI/CD、Docker、DevOps</td></tr>
+<tr><td><code>docs/</code></td><td>架构图、ADR、API contract、threat model、incident postmortem、英文 README</td><td>设计、沟通、文档、面试</td></tr>
+</tbody></table>
+<div class="note"><strong>仓库验收标准：</strong>任何面试官按 README 操作，15 分钟内能启动 API、数据库和客户端；CI 能自动测试；至少有一个失败重试和一个离线场景；你能用英文讲完架构、一次故障和三项取舍。</div>
+
+<h2>六、12 周最小可行计划</h2>
+<table><thead><tr><th>周数</th><th>技术主线</th><th>英文/面试</th><th>交付物</th></tr></thead><tbody>
+<tr><td>1–2</td><td>Compose state/navigation；Kotlin Coroutines/Flow；确定项目边界</td><td>英文自我介绍；整理 5 个 STAR 故事</td><td>Android app shell + 英文 README 初稿</td></tr>
+<tr><td>3–4</td><td>Retrofit/OkHttp、Room、错误模型、分页、缓存</td><td>每天 20 分钟技术口述；练 API/架构题</td><td>可联网、可离线的移动端 feature</td></tr>
+<tr><td>5–6</td><td>Spring Boot 或 .NET API；PostgreSQL；OpenAPI；JWT</td><td>讲清一个 production incident 和架构取舍</td><td>API + DB + 客户端端到端闭环</td></tr>
+<tr><td>7–8</td><td>单元/UI/integration tests；GitHub Actions；Docker Compose</td><td>1 次模拟面试/周；开始读真实 JD</td><td>CI green；测试报告；启动说明</td></tr>
+<tr><td>9–10</td><td>重试、幂等、JSON/XML mapping；日志、指标、性能</td><td>行为题、stakeholder、冲突和 mentoring</td><td>integration demo + incident postmortem</td></tr>
+<tr><td>11–12</td><td>Flutter 同功能/原生互操作；安全、无障碍、发布</td><td>每周 2 次模拟面试；完善简历关键词</td><td>portfolio v1、英文 CV、cover letter 模板</td></tr>
+</tbody></table>
+<p><strong>若时间少于 12 周：</strong>保留第 1–8 周，砍掉 Flutter 二次实现和云服务深挖；若已有完整 Flutter 经验，直接把第 11–12 周换成更强的 Compose、系统设计和英文面试。</p>
+
+<h2>七、每周时间预算</h2>
+<table><thead><tr><th>阶段</th><th>技术补缺</th><th>英文</th><th>面试/求职</th><th>每周总时长</th></tr></thead><tbody>
+<tr><td>前 8 周</td><td>8 小时</td><td>5 小时</td><td>3 小时</td><td>16 小时</td></tr>
+<tr><td>投递前 4 周</td><td>5 小时</td><td>6 小时</td><td>6 小时</td><td>17 小时</td></tr>
+<tr><td>工作日极简版</td><td>每天 60 分钟项目</td><td>每天 30 分钟听说</td><td>每周 2 次各 60 分钟</td><td>约 10–12 小时</td></tr>
+</tbody></table>
+<p>如果只能投入每周 8 小时：技术 4、英文 2.5、面试 1.5；不要停止英文和面试，技术学习很容易变成“永远准备中”。</p>
+
+<h2>八、岗位投递策略</h2>
+<div class="grid">
+<div class="card"><h3>Darwin 本地优先</h3><ul><li>主搜：<code>Senior Software Engineer</code>、<code>Application Developer</code>、<code>Mobile Application Developer</code>、<code>Integration Developer</code>。</li><li>优先雇主生态：NT Government、Charles Darwin University、医疗、社区服务、当地 IT 服务商、允许非公民申请的承包商。</li><li>遇到 <code>Australian Citizen</code>、<code>Baseline clearance</code>、<code>NV1</code>，先检查资格，不要把它当普通技术缺口。</li><li>明确表达愿意 onsite、参与小团队、做跨职能交付和 fixed-term contract。</li></ul></div>
+<div class="card"><h3>全澳洲 Remote 备选</h3><ul><li>确认“可从 NT 工作”，不只看页面上的 Remote 标签。</li><li>优先 native Android、Flutter、Mobile Software Engineer；其次 API/Application。</li><li>询问时区、税务/payroll、设备、出差、办公室频率和是否需要澳洲地址。</li><li>远程工作能积累澳洲项目经验，但对 Darwin 本地 network 和在地雇主信号弱于 Darwin onsite。</li></ul></div>
+<div class="card"><h3>为 Melbourne 提前布局</h3><ul><li>保持 Kotlin/Compose 主线，不要为了 Darwin 完全转离移动端。</li><li>每 6 个月更新一次英文 portfolio、架构案例和量化成果。</li><li>补充支付、安全、可靠性、A/B、产品协作等大团队关键词。</li><li>逐步积累 mentoring、技术决策和跨团队影响力，目标 Senior/Lead，而非重新从 mid-level 开始。</li></ul></div>
+</div>
+
+<h2>九、不要把本地经验和移民等同</h2>
+<div class="warning">Darwin 本地工作经验对简历、推荐人、澳洲工作方式和雇主网络有帮助，但<strong>不会自动等于绿卡资格</strong>。签证、职业清单、ACS 评估、英语、年龄、州/领地提名、雇主担保、工资和当期政策需要分别核对；不要为了“本地经验”接受明显不匹配且无法形成 ICT 专业履历的岗位。</div>
+<ul><li>第一份工作优先选择能留下真实 software/application/integration 职责、正式合同、可核验推荐人和清晰职位名称的工作。</li><li>保留合同、职位描述、pay slips、super、职责证明和项目成果；以后职业评估或签证材料可能需要。</li><li>目标是在 Darwin 做 1–3 年“可迁移”的澳洲 ICT 工作，再根据岗位密度、签证和个人偏好转 Melbourne。</li></ul>
+
+<h2>十、完成标准（不是“学过”标准）</h2>
+<ul class="check"><li>□ 能在 15 分钟内启动自己的 Android、Flutter、API、DB demo。</li><li>□ 能画出系统架构并解释客户端、API、数据库、第三方集成的边界。</li><li>□ 能解释 timeout、retry、idempotency、cache、offline、auth 和 PII。</li><li>□ CI 能自动运行 lint、unit test、integration test，并生成构建产物。</li><li>□ 至少完成一次性能分析、一次 crash/ANR 排查和一次 incident postmortem。</li><li>□ 能用英文做 90 秒自我介绍，讲 5 分钟项目，回答 10 分钟系统设计追问。</li><li>□ 具备三套针对岗位的简历：Mobile、Software Engineer、Application/Integration。</li><li>□ 投递前已确认签证/工作权、Darwin onsite 或 Australia-wide remote 条件。</li></ul>
+
+<h2>十一、来源与快照说明</h2>
+<ul>
+<li><a href="https://au.jora.com/Android-Developer-jobs-in-Darwin-NT">Jora — Android Developer Darwin</a>；<a href="https://au.jora.com/Flutter-Developer-jobs-in-Darwin-NT">Flutter Darwin</a>；<a href="https://au.jora.com/Mobile-Developer-jobs-in-Darwin-NT">Mobile Darwin</a>。</li>
+<li><a href="https://au.jora.com/Software-Engineer-jobs-in-Darwin-NT">Jora — Software Engineer Darwin</a>；<a href="https://au.jora.com/Integration-Developer-jobs-in-Darwin-NT">Integration Developer Darwin</a>。</li>
+<li><a href="https://au.jora.com/Android-Developer-jobs-in-Melbourne-VIC">Jora — Android Developer Melbourne</a>；<a href="https://au.jora.com/Flutter-Developer-jobs-in-Melbourne-VIC">Flutter Melbourne</a>；<a href="https://au.jora.com/Senior-Android-Developer-jobs-in-Melbourne-VIC">Senior Android Melbourne</a>。</li>
+<li><a href="https://au.jora.com/Remote-Android-Developer-jobs-in-Australia">Jora — Remote Android Australia</a>；<a href="https://au.jora.com/Remote-Flutter-Developer-jobs-in-Australia">Remote Flutter Australia</a>。</li>
+<li><a href="https://jobs.nt.gov.au/Home/Search">NT Government Jobs</a>；<a href="https://www.acs.org.au/msa/information-for-applicants/occupations-anzsco-codes/information-technology.html">ACS IT occupations and ANZSCO</a>。</li>
+</ul>
+<p class="small"><strong>生成时间：</strong>2026-09-13。招聘页面、职位数量、签证政策和雇主要求会变化；本页用于技能规划，不构成就业、移民或法律建议。后续建立代码仓库时，优先按“仓库验收标准”和 12 周计划拆 issue，不要一次性追求完整企业级系统。</p>
+</body>
+</html>

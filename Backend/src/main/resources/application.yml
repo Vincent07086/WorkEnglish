@@ -1,0 +1,21 @@
+spring:
+  application.name: englishlog-api
+  datasource:
+    url: ${DB_URL:jdbc:h2:file:./data/englishlog;MODE=PostgreSQL}
+    username: ${DB_USERNAME:sa}
+    password: ${DB_PASSWORD:}
+    driver-class-name: ${DB_DRIVER:org.h2.Driver}
+  jpa:
+    hibernate.ddl-auto: update
+    open-in-view: false
+  servlet.multipart:
+    max-file-size: 10MB
+    max-request-size: 12MB
+server.port: ${PORT:5050}
+app:
+  jwt-secret: ${JWT_SECRET:change-this-development-secret-to-a-long-256-bit-key}
+  upload-dir: ${UPLOAD_DIR:./uploads}
+  frontend-url: ${FRONTEND_URL:http://localhost:5173}
+  google-client-id: ${GOOGLE_CLIENT_ID:}
+  google-client-secret: ${GOOGLE_CLIENT_SECRET:}
+springdoc.swagger-ui.path: /swagger

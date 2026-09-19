@@ -1,0 +1,42 @@
+# Build output
+target/
+*.class
+*.jar
+!gradle-wrapper.jar
+
+# Maven local cache and generated metadata
+.mvn/wrapper/maven-wrapper.jar
+
+# Runtime data and local uploads
+*.db
+*.db-shm
+*.db-wal
+data/
+uploads/
+logs/
+*.log
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+application-local.yml
+application-local.yaml
+application-*.properties
+
+# IDEs
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Coverage and reports
+coverage/
+reports/
+.jacoco/
